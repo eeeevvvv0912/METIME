@@ -1,0 +1,386 @@
+<html>
+  <head>    
+    <title>卜己站 ME-TIME</title>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+  </head>
+      
+
+
+<script language="JavaScript">
+    
+    
+                function processForm() {
+                    var sum = 0;
+                    //创建数组
+                    hc = new Array(15);
+                    //如果识别到文档中表单see中第一个问题的第一个选项被选中就使sum+该选项得分
+                    if (document.see.c1[0].checked == 1) sum += 0;
+                    if (document.see.c1[1].checked == 1) sum += 1;
+                    if (document.see.c1[2].checked == 1) sum += 2;
+                    if (document.see.c1[3].checked == 1) sum += 3;
+
+                    if (document.see.c2[0].checked == 1) sum += 0;
+                    if (document.see.c2[1].checked == 1) sum += 1;
+                    if (document.see.c2[2].checked == 1) sum += 2;
+                    if (document.see.c2[3].checked == 1) sum += 3;
+
+                    if (document.see.c3[0].checked == 1) sum += 0;
+                    if (document.see.c3[1].checked == 1) sum += 1;
+                    if (document.see.c3[2].checked == 1) sum += 2;
+                    if (document.see.c3[3].checked == 1) sum += 3;
+
+                    if (document.see.c4[0].checked == 1) sum += 0;
+                    if (document.see.c4[1].checked == 1) sum += 1;
+                    if (document.see.c4[2].checked == 1) sum += 2;
+                    if (document.see.c4[3].checked == 1) sum += 3;
+
+                    if (document.see.c5[0].checked == 1) sum += 0;
+                    if (document.see.c5[1].checked == 1) sum += 1;
+                    if (document.see.c5[2].checked == 1) sum += 2;
+                    if (document.see.c5[3].checked == 1) sum += 3;
+
+                    if (document.see.c6[0].checked == 1) sum += 0;
+                    if (document.see.c6[1].checked == 1) sum += 1;
+                    if (document.see.c6[2].checked == 1) sum += 2;
+                    if (document.see.c6[3].checked == 1) sum += 3;
+
+                    if (document.see.c7[0].checked == 1) sum += 0;
+                    if (document.see.c7[1].checked == 1) sum += 1;
+                    if (document.see.c7[2].checked == 1) sum += 2;
+                    if (document.see.c7[3].checked == 1) sum += 3;
+
+                    if (document.see.c8[0].checked == 1) sum += 0;
+                    if (document.see.c8[1].checked == 1) sum += 1;
+                    if (document.see.c8[2].checked == 1) sum += 2;
+                    if (document.see.c8[3].checked == 1) sum += 3;
+
+                    if (document.see.c9[0].checked == 1) sum += 0;
+                    if (document.see.c9[1].checked == 1) sum += 1;
+                    if (document.see.c9[2].checked == 1) sum += 2;
+                    if (document.see.c9[3].checked == 1) sum += 3;
+
+                    if (document.see.c10[0].checked == 1) sum += 0;
+                    if (document.see.c10[1].checked == 1) sum += 1;
+                    if (document.see.c10[2].checked == 1) sum += 2;
+                    if (document.see.c10[3].checked == 1) sum += 3;
+
+                    if (document.see.c11[0].checked == 1) sum += 0;
+                    if (document.see.c11[1].checked == 1) sum += 1;
+                    if (document.see.c11[2].checked == 1) sum += 2;
+                    if (document.see.c11[3].checked == 1) sum += 3;
+
+                    if (document.see.c12[0].checked == 1) sum += 0;
+                    if (document.see.c12[1].checked == 1) sum += 1;
+                    if (document.see.c12[2].checked == 1) sum += 2;
+                    if (document.see.c12[3].checked == 1) sum += 3;
+
+                    if (document.see.c13[0].checked == 1) sum += 0;
+                    if (document.see.c13[1].checked == 1) sum += 1;
+                    if (document.see.c13[2].checked == 1) sum += 2;
+                    if (document.see.c13[3].checked == 1) sum += 3;
+
+                    if (document.see.c14[0].checked == 1) sum += 0;
+                    if (document.see.c14[1].checked == 1) sum += 1;
+                    if (document.see.c14[2].checked == 1) sum += 2;
+                    if (document.see.c14[3].checked == 1) sum += 3;
+
+                    if (document.see.c15[0].checked == 1) sum += 0;
+                    if (document.see.c15[1].checked == 1) sum += 1;
+                    if (document.see.c15[2].checked == 1) sum += 2;
+                    if (document.see.c15[3].checked == 1) sum += 3;
+
+
+                    if (sum <= 4) document.see.answer.value = "您的得分为"+sum+"分\n您精神健康，没有抑郁";
+                    if (sum <= 10 && sum >= 5) document.see.answer.value = "您的得分为"+sum+"分\n您偶尔有抑郁情绪";
+                    if (sum <= 20 && sum >= 11) document.see.answer.value = "您的得分为"+sum+"分\n您有轻度抑郁症";
+                    if (sum <= 30 && sum >= 21) document.see.answer.value = "您的得分为"+sum+"分\n您有中度抑郁症";
+                    if (sum <= 45 && sum >= 31) document.see.answer.value = "您的得分为"+sum+"分\n您有严重抑郁症并需要立即接受专科医生的治疗";
+
+                }
+            </script>
+      
+
+<body background="star.jpg"> 
+  <form name="see"> 
+  
+   <center> 
+   <br><br><br><br><br><br><br><br><br><br>
+    <p style="color:white;"><b>1.某個悠閒的下午，手機突然跳出一則新訊息，一看竟然是多年沒聯繫的同學，你的第一反應是？
+</b></p>
+  
+  
+   <div id="radio">
+	<label><input type="radio" name="c1" value="12" checked="checked"><span class="round button">直接約出來碰面</span></label>
+	<label><input type="radio" name="c1" value="32"><span class="round button">很開心和對方聊了起來</span></label>
+	<label><input type="radio" name="c1" value="32"><span class="round button">他怎麼會突然找我？</span></label>
+	<label><input type="radio" name="c1" value="32"><span class="round button">打個招呼有空聊幾句</span></label>
+</div>
+
+
+<br><br><br><br><br>
+    <p style="color:white;"><b>2.下列哪個時刻你願意到學校操場運動或者散步？
+
+</b></p>
+  <div id="radio">
+	<label><input type="radio" name="c2" value="11" checked="checked"><span class="round button">下午上體育課的人正多時
+</span></label>
+	<label><input type="radio" name="c2" value="31"><span class="round button">朋友揪隨時都可以！
+</span></label>
+	<label><input type="radio" name="c2" value="31"><span class="round button">晚上阿公阿媽出來活動時
+</span></label>
+	<label><input type="radio" name="c2" value="31"><span class="round button">早上太陽最弱的時候　適合運動
+</span></label>
+</div>
+
+          <br><br><br><br><br>
+    <p style="color:white;"><b>3.你回訊息的習慣是?
+
+</b></p>
+  <div id="radio">
+	<label><input type="radio" name="c3" value="11" checked="checked"><span class="round button">會時時注意是否有重要事情
+
+</span></label>
+	<label><input type="radio" name="c3" value="31"><span class="round button">只要有人密我 基本上看到就會馬上回
+</span></label>
+	<label><input type="radio" name="c3" value="31"><span class="round button">等忙到一個段落再回 眼前的事重要
+
+</span></label>
+	<label><input type="radio" name="c3" value="31"><span class="round button">需要好好想想怎麼回 晚點再說
+
+</span></label>
+</div>
+
+                    <br><br><br><br><br>
+    <p style="color:white;"><b>4.當準備線上課的期末報告 你最重視的是
+
+
+</b></p>
+  <div id="radio">
+	<label><input type="radio" name="c4" value="13" checked="checked"><span class="round button">報告是否都準備好了?是否能順暢地進行?
+
+</span></label>
+	<label><input type="radio" name="c4" value="33"><span class="round button">自己看起來是不是帥帥美美的
+
+</span></label>
+	<label><input type="radio" name="c4" value="33"><span class="round button">隨時注意組員需不需要幫忙
+
+
+</span></label>
+	<label><input type="radio" name="c4" value="33"><span class="round button">報告ppt是不是都正確?有沒有錯誤的地方?
+
+</span></label>
+</div>
+          
+                               <br><br><br><br><br>
+    <p style="color:white;"><b>5.星期五的晚上，朋友突然密你明天要不要出去玩，你的反應是?
+
+
+</b></p>
+  <div id="radio">
+	<label><input type="radio" name="c5" value="14" checked="checked"><span class="round button">看他跟我交情如何 泛泛之交就算了
+
+
+</span></label>
+	<label><input type="radio" name="c5" value="34"><span class="round button">只要有朋友約就算臨時也要出去玩!
+
+
+</span></label>
+	<label><input type="radio" name="c5" value="34"><span class="round button">通常都在按著計劃完成事情
+
+
+
+</span></label>
+	<label><input type="radio" name="c5" value="34"><span class="round button">星期日能補回來進度嗎?不行就先不要好了
+
+
+</span></label>
+</div>
+         <br><br><br><br><br>
+    <p style="color:white;"><b>6.通常走進超市的你，會是哪種類型?
+
+</b></p>
+  <div id="radio">
+	<label><input type="radio" name="c6" value="14" checked="checked"><span class="round button">通常走進超市的你，會是哪種類型?
+
+</span></label>
+	<label><input type="radio" name="c6" value="34"><span class="round button">很隨意逛 不特別買什麼
+
+
+</span></label>
+	<label><input type="radio" name="c6" value="34"><span class="round button">有固定會買的東西 不隨便嘗試新的
+
+
+</span></label>
+	<label><input type="radio" name="c6" value="34"><span class="round button">仔細比價 看哪個CP值高
+</span></label>
+</div>
+
+<br><br><br><br><br>
+    <p style="color:white;"><b>7.通常你使用ig的習慣是?
+
+
+</b></p>
+  <div id="radio">
+	<label><input type="radio" name="c7" value="14" checked="checked"><span class="round button">我會以自己紀錄為主 很少看別人在幹嘛
+
+</span></label>
+	<label><input type="radio" name="c7" value="34"><span class="round button">我會以自己紀錄為主 很少看別人在幹嘛
+
+
+
+</span></label>
+	<label><input type="radio" name="c7" value="34"><span class="round button">先忙自己的事 休息時間再上去看看
+
+
+</span></label>
+	<label><input type="radio" name="c7" value="34"><span class="round button">看看朋友有沒有分享什麼有用的資訊
+
+</span></label>
+</div>
+               
+               
+   <br><br><br><br><br>
+    <p style="color:white;"><b>8.現在的你正昏睡起來，發現自己躺在亞馬遜叢林旁的河岸邊，河岸緊接著瀑布，瀑布下方有燈火通明的村落。這時，一艘木筏正從上游的方向漂過來，這時的你會如何選擇?
+
+
+</b></p>
+  <div id="radio">
+	<label><input type="radio" name="c8" value="14" checked="checked"><span class="round button">當然是趕快跳上船 不然在這也是等死
+
+
+</span></label>
+	<label><input type="radio" name="c8" value="34"><span class="round button">當然是趕快跳上船 不然在這也是等死
+
+
+
+
+</span></label>
+	<label><input type="radio" name="c8" value="34"><span class="round button">萬一坐船下瀑布淹死怎麼辦? 我還是待在這好了
+
+
+
+</span></label>
+	<label><input type="radio" name="c8" value="34"><span class="round button">那艘船穩固嗎?會不會還沒到村莊就壞掉了?
+
+</span></label>
+</div>            
+               
+  <br><br><br><br><br>
+    <p style="color:white;"><b>9.這音樂聽起來什麼感覺?
+
+</b></p>
+
+<video controls>
+    <source src="dogs.mp4" type="video/mp4; codecs='avc1, mp4a'">
+    <source src="dogs.webm" type="video/webm; codecs='vp8.0, vorbis'">
+</video>
+ 
+ 
+ 
+ 
+ 
+ 
+  <div id="radio">
+	<label><input type="radio" name="c9" value="14" checked="checked"><span class="round button">當然是趕快跳上船 不然在這也是等死
+
+
+</span></label>
+	<label><input type="radio" name="c9" value="34"><span class="round button">當然是趕快跳上船 不然在這也是等死
+
+
+
+
+</span></label>
+	<label><input type="radio" name="c9" value="34"><span class="round button">萬一坐船下瀑布淹死怎麼辦? 我還是待在這好了
+
+
+
+</span></label>
+	<label><input type="radio" name="c9" value="34"><span class="round button">那艘船穩固嗎?會不會還沒到村莊就壞掉了?
+
+</span></label>
+</div>            
+                             
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+                <p><b>9、你是否觉得力不从心或自叹比不上别人?</b></p>
+                <p>
+                    <input type="radio" value="14" name="c9" />没有
+                    <input type="radio" value="34" name="c9" />轻度
+                    <input type="radio" value="34" name="c9" />中度
+                    <input type="radio" value="34" name="c9" />严重
+                </p>
+                <p><b>10、你是否对任何事都自责?</b></p>
+                <p>
+                    <input type="radio" value="14" name="c10" />没有
+                    <input type="radio" value="34" name="c10" />轻度
+                    <input type="radio" value="34" name="c10" />中度
+                    <input type="radio" value="34" name="c10" />严重
+                </p>
+                <p><b>11、你是否在做决定时犹豫不决?</b></p>
+                <p>
+                    <input type="radio" value="14" name="c11" />没有
+                    <input type="radio" value="34" name="c11" />轻度
+                    <input type="radio" value="34" name="c11" />中度
+                    <input type="radio" value="34" name="c11" />严重
+                </p>
+                <p><b>12、这段时间你是否一直处于愤怒和不满状态?</b></p>
+                <p>
+                    <input type="radio" value="14" name="c12" />没有
+                    <input type="radio" value="34" name="c12" />轻度
+                    <input type="radio" value="34" name="c12" />中度
+                    <input type="radio" value="34" name="c12" />严重
+                </p>
+                <p><b>13、你对事业、家庭、爱好或朋友是否丧失了兴趣?</b></p>
+                <p>
+                    <input type="radio" value="14" name="c13" />没有
+                    <input type="radio" value="34" name="c13" />轻度
+                    <input type="radio" value="34" name="c13" />中度
+                    <input type="radio" value="34" name="c13" />严重
+                </p>
+                <p><b>14、你是否感到一蹶不振，做事情毫无动力?</b></p>
+                <p>
+                    <input type="radio" value="14" name="c14" />没有
+                    <input type="radio" value="34" name="c14" />轻度
+                    <input type="radio" value="34" name="c14" />中度
+                    <input type="radio" value="34" name="c14" />严重
+                </p>
+                <p><b>15、你是否以为自己已衰老或失去魅力?</b></p>
+                <p>
+                    <input type="radio" value="14" name="c15" />没有
+                    <input type="radio" value="34" name="c15" />轻度
+                    <input type="radio" value="34" name="c15" />中度
+                    <input type="radio" value="34" name="c15" />严重
+                </p>
+                <br /><br /><br />
+                <style>
+#radio input[type="radio"] {display: none; }
+#radio input:checked + .button {background: #5e7380; color: #fff; cursor: default; }
+#radio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #333; cursor: pointer; }
+#radio.button:hover {background: #bbb; color: #fff; }
+#radio .round {border-radius: 5px; }
+</style>
+    
+                <p><input id="btn" onclick=" processForm()" type="button" value="查看测试结果" /></p>
+                <br /><br />
+                <!--创建文本区域用来存放测试结果-->
+                <p><textarea style="width: 500px" name="answer" rows="6" cols="50"></textarea></p>
+            </form>
+            </center>
+</html>
