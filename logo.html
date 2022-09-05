@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>    
+    <title>卜己站 ME-TIME</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+  </head>
+<script language="javascript">
+    
+function run10() {
+    document.body.style.backgroundImage = "url('star.jpg')";
+}
+  function two_char(n) {
+            return n >= 10 ? n : "0" + n;
+        }
+        function time_fun() {
+            var sec=0;
+            setInterval(function () {
+                sec++;
+                var date = new Date(0, 0)
+                date.setSeconds(sec);
+                var h = date.getHours(), m = date.getMinutes(), s = date.getSeconds();
+                document.getElementById("mytime").innerText = two_char(h) + ":" + two_char(m) + ":" + two_char(s);
+            }, 1000);
+        }
+
+function main(){
+  var questionArray = new Array("Q1","Q2","Q3","Q4","Q5");
+  var resultArray = new Array();
+   var rightArray = new Array();
+
+  //aryAns[]是從後端返回的陣列,當點選交卷的時候,向後端請求正確答案的陣列,賦值給aryAns[]即可;
+  var aryAns = new Array(4,3,4,3,2);   //建立儲存正確答案的陣列
+  for (var i = 0; i < questionArray.length; i++) {
+    if (Name(questionArray[i])!=10) {
+      resultArray[i] = Name(questionArray[i]); 
+    }else{
+      alert("第"+(i+1)+"題,您未作答!!");
+      return false;
+    }
+  }
+  var right_number= 0;//計算答對的題數；
+  for (var i = 0; i < questionArray.length; i++) {
+    if (aryAns[i]==resultArray[i]) {
+          right_number++;
+          rightArray[i] = 1;
+    }else{
+          rightArray[i] = 0;
+    }
+  }
+  var right_question = " ";
+  var error_question = " ";
+  for (var i = 0; i < rightArray.length; i++) {
+      if (rightArray[i] ==1 ) {
+          right_question += i+1+",";
+      }else{
+          error_question += i+1+",";
+      }
+  }
+  var time=document.getElementById("mytime").innerHTML;
+  document.getElementById("right_number").innerText = right_number;
+  document.getElementById("time").innerText = time;
+  if (right_question!=" ") {
+      document.getElementById("right_question").innerText = right_question;
+
+  }
+  if (error_question!=" ") {
+  document.getElementById("error_question").innerText = error_question;
+
+}
+};
+
+function Name(name)
+{
+  var temp = document.getElementsByName(name);
+  var intHot = 9;
+  for(var i=0;i<temp.length;i++)
+  {
+     if(temp[i].checked)
+      intHot = temp[i].value;
+  }
+  if (intHot==9) {
+      return 10;
+  }
+  return intHot;
+};
+
+</script>
+  <body onload="time_fun()" style="padding:0px;
+">
+ <style>
+body {
+  background-image: url('bgstart.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+     .container img {
+            vertical-align: middle;
+            border: 0;
+        }
+     
+</style>  
+  	<center>
+        <br> <br> <br> <br>
+  	 <img src="https://drive.google.com/uc?export=view&id=1JBTVxY2Q3lB939wUxoTCFtKjgw4cXf2A" alt="logobg" width="570" height="370"><br><br><br>
+        <center>
+        <input type="image" src="https://drive.google.com/uc?export=view&id=1TXz7MnnmOMcvb7YfPnCjX7qbAQxvc-44" width="30%" alt="send" name="Test" id="Test" onclick="location.href='metimeV-1.html'" />
+        <br><br><br><br><br>
+        <h1 >START <span id="mytime">00:00:00</span></h1><br>
+  		</center>
+  </body>
+</html>
